@@ -1,0 +1,21 @@
+extends layouts/default
+include helpers/_mixins-default
+include helpers/_mixins-custom
+
+block variables
+  - const title = "Главная страница проекта"
+
+block content
+      include ../blocks/modules/header/header.pug
+      .container#container(data-scroll-container)
+        .wrapper
+          main.main
+            include ../blocks/modules/main-top/main-top.pug
+            include ../blocks/modules/security/security.pug
+            include ../blocks/modules/possibilities/possibilities.pug
+            include ../blocks/modules/bottom/bottom.pug
+        include ../blocks/modules/footer/footer.pug
+
+block scripts
+  script(defer src="js/vendor.js")
+  script(defer src="js/main.js")

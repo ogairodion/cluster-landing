@@ -1,0 +1,47 @@
+-
+    const icons = ['twitter', 'telegram', 'fb', 'github', 'discord']
+
+footer.footer
+    .l-footer
+        .footer__logo-mobile
+        .footer__wrapper
+            .footer__column.footer__column--first
+                .footer__logo
+                    +svgMono('footer-logo')
+                .footer__apps
+                    a.footer__app(href="") 
+                        picture
+                            source(data-srcset="img/footer/apple.webp" type="image/webp")
+                            source(data-srcset="img/footer/apple.png" type="image/png")
+                            img.lazy(data-src="img/footer/apple.png" alt="")
+                    a.footer__app(href="") 
+                        picture
+                            source(data-srcset="img/footer/google.webp" type="image/webp")
+                            source(data-srcset="img/footer/google.png" type="image/png")
+                            img.lazy(data-src="img/footer/google.png" alt="")
+                .footer__icons
+                    each icon in icons 
+                        a.footer__icon(href="") 
+                            +svgMono(icon)
+                .footer__lang
+                    .footer__lang-item.active ru
+                    .footer__lang-item en
+            .footer__column.footer__menu
+                .footer__menu-title Проект
+                a.footer__menu-item(href="") Безопасность 
+                a.footer__menu-item(href="") Поддержка 
+                a.footer__menu-item(href="") Команда Whitepaper 
+            .footer__column.footer__menu
+                .footer__menu-title Ресурсы
+                a.footer__menu-item(href="") Блог 
+                a.footer__menu-item(href="") Как пользоваться 
+                a.footer__menu-item(href="") Разработчикам
+                a.footer__menu-item(href="") Бизнесам
+                a.footer__menu-item(href="") Соглашения
+
+            
+
+
+  
+
+ 
